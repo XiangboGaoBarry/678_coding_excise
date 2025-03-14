@@ -6,9 +6,8 @@ function createTemperatureColorScale(minTemp = 0, maxTemp = 40) {
 }
 
 function createTemperatureLegend(svg, width, height, gradientId, colorScale, title, position) {
-    // Swap width and height for vertical orientation
-    const legendWidth = height;  // This will be the height of the vertical legend
-    const legendHeight = width;  // This will be the width of the vertical legend
+    const legendWidth = height;
+    const legendHeight = width;
     
     const legendSvg = svg.append("g")
         .attr("class", "legend")
@@ -58,36 +57,6 @@ function createTemperatureLegend(svg, width, height, gradientId, colorScale, tit
     
     return legendSvg;
 }
-
-// function createYearMonthAxes(svg, years, months, cellWidth, cellHeight) {
-//     // Create X axis (years)
-//     svg.append("g")
-//         .attr("class", "x-axis")
-//         .selectAll("text")
-//         .data(years)
-//         .enter()
-//         .append("text")
-//         .attr("x", (d, i) => i * cellWidth + cellWidth / 2)
-//         .attr("y", -10)
-//         .style("text-anchor", "middle")
-//         .style("font-size", "12px")
-//         .text(d => d);
-    
-//     // Create Y axis (months)
-//     svg.append("g")
-//         .attr("class", "y-axis")
-//         .selectAll("text")
-//         .data(months)
-//         .enter()
-//         .append("text")
-//         .attr("x", -10)
-//         .attr("y", (d, i) => i * cellHeight + cellHeight / 2)
-//         .attr("dy", "0.35em")
-//         .style("text-anchor", "end")
-//         .style("font-size", "12px")
-//         .text(d => d);
-// }
-
 
 
 function createYearMonthAxes(svg, years, months, cellWidth, cellHeight) {

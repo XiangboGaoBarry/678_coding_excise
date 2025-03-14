@@ -1,10 +1,5 @@
 
 
-/**
- * Aggregate temperature data by year and month
- * @param {Array} data - Processed temperature data
- * @returns {Array} Aggregated monthly data
- */
 function aggregateMonthlyData(data) {
     // Extract years and months
     const years = Array.from(new Set(data.map(d => d.date.getFullYear()))).sort();
