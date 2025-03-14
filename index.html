@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Temperature Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hong Kong Temperature Visualization</h1>
+    
+    <div class="container">
+        <h2>Level 1: Year-Month Temperature Heatmap</h2>
+        <div class="controls">
+            <button id="max-temp-btn" class="btn active">Maximum Temperature</button>
+            <button id="min-temp-btn" class="btn">Minimum Temperature</button>
+        </div>
+        <div id="heatmap"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Level 2: Advanced Year-Month Temperature Heatmap (with Daily Variations)</h2>
+        <div id="advanced-heatmap"></div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/basicHeatmap.js"></script>
+    <script src="js/advancedHeatmap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
